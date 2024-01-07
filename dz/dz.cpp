@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include "Header1.h"
 
 //git
 //два файла
@@ -11,7 +12,7 @@
 
 using namespace std;
 
-
+/*
 struct Point {
     int x, y;
 };
@@ -35,7 +36,7 @@ bool solveMaze(vector<vector<int>>& maze, vector<vector<string>>& new_maze, Poin
     vector<vector<int>> dist(rows, vector<int>(cols, -1));
     queue<Point> q;
 
-   
+
     q.push(start);
     dist[start.x][start.y] = 0;
 
@@ -43,7 +44,7 @@ bool solveMaze(vector<vector<int>>& maze, vector<vector<string>>& new_maze, Poin
     int dx[] = { -1, 0, 1, 0 };
     int dy[] = { 0, 1, 0, -1 };
 
-  
+
     while (!q.empty()) {
         Point curr = q.front();
         q.pop();
@@ -67,11 +68,11 @@ bool solveMaze(vector<vector<int>>& maze, vector<vector<string>>& new_maze, Poin
     }
 
     return false;
-}
+}*/
 
 int main() {
     string name;
-    cin >> name; 
+    cin >> name;
     string line;
     int** d;
     Point start;
@@ -97,7 +98,7 @@ int main() {
             new_maze[i][j] = to_string(maze[i][j]);
         }
     }
-    
+
     setlocale(LC_ALL, "Russian");
     if (solveMaze(maze, new_maze, start, end)) {
         std::ofstream file(name, std::ios::app);
